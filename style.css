@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --red:#E50914;
+    --black:#000000;
+    --light-color:#181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+::-webkit-scrollbar
+{
+   width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(transparent,#E50914);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: linear-gradient(transparent,#00c6ff);
+    border-radius: 6px;
+}
+
+*::SELECTION{
+    color: #fff;
+    background-color: var(--red);
+}
+
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+body{
+    background-color:var(--light-color);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top:5.5rem;
+}
+
+
+section{
+    padding: 2rem 9%;
+}
+
+
+
+
+header{
+    top: 0;
+    left:0;
+    right:0;
+    padding: 1rem 7%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+}
+.img-logo{
+    width: 300px;
+}
+
+.heading{
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 3rem;
+    font-size:4rem;
+}
+.btnbtn
+{
+    margin-top: 0.5rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: var(--red);
+    border-radius: .3rem;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+}
+.btn{
+    margin-top:1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--red);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover{
+    background: var(--black);
+    color: var(--red);
+    letter-spacing: .1rem;
+}
+
+header .logo{
+    color: #fff;;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i{
+    color: var(--red);
+
+}
+header .content span{
+    color: #fff;
+    font-size: 1.7rem;
+}
+header .content a
+{
+font-size: 1.7rem;
+border-radius: .5rem;
+padding: .3rem 1.2rem;
+    color: #fff;
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: #fff;
+}
+
+header .content a.active,
+header .content a:hover,
+header .navbar a.active,
+header .navbar a:hover{
+    color: #fff;
+    background: var(--red);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 50%;
+    background:var(--red);
+}
+
+
+
+header .icons i:hover,
+header .icons a:hover{
+    color: var(--red);
+    background: #fff;
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+
+.home{
+    padding:0;
+}
+
+.home .box{
+    min-height: 100vh;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-color) !important;
+    background-position: center !important;
+    justify-content:flex-end;
+    padding:2rem 9%;
+    background-color: #000;
+}
+
+.home .box{
+    justify-content: flex-start;
+}
+
+.home .box.second{
+    justify-content: flex-end;
+}
+
+.home .box .content{
+    width:30rem;
+
+}
+
+.home .box .content h3{
+    font-size: 4.5rem;
+    color: #fff;
+    padding-top: .5rem;
+
+    font-family: sans-serif;
+    text-transform: uppercase;
+    -webkit-text-fill-color:  #000;
+    -webkit-text-stroke-width: 2px;
+}
+
+.home .box .content p{
+    line-height: 2;
+    color: #E50914;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+
+}
+
+
+/* media query */
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+        
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+    section{
+        padding:2rem;
+    }
+}
+
+@media(max-width: 768px){
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        display:block;
+        padding:1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--red);
+    }
+    .home .box .content h3{
+        font-size:5rem;
+    } 
+}
+
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+        
+    } 
+}
+
+
+.mncontainer{
+    margin-top: 2rem;
+    width: 100%;
+    height: 800px;
+}
+
+.mncontainer .container1{
+    position: relative;
+    width: 1080px;
+    height: 300px;
+    background: transparent;
+
+}
+
+h2{
+    color: #fff;
+    font-size: 6rem;
+    text-align: center;
+}
+
+.mncontainer .container1 .box {
+    position: relative;
+    width: calc(270px - 30px);
+    height: calc(300px - 30px);
+    float: left;
+    margin: 15px;
+    background: transparent;
+    align-items: center;
+}
+
+.mncontainer .container1 .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    height: 100%;
+    transition: 0.5s;
+    z-index: 1;
+    }
+.mncontainer .container1 .box:hover img{
+  transform: scale(1.5);
+  top: 20px;
+  width: 75px;
+  height: 80px;
+  left: calc(50% - 40px);
+   position: relative;
+    display: block;
+}
+
+
+.mncontainer .container1 .box .content{
+    position: relative;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.5s;
+    padding: 20px;
+    opacity: 0;
+
+}
+.mncontainer .container1 .box:hover .content{
+    top: 50px;
+    opacity: 1;
+}
+.container1 .box .content h4{
+    margin: -20px 0 15px;
+    padding: 0;
+    color: var(--red);
+    font-size: 1.8rem;
+}
+
+.container1 .box .content h3{
+    margin: -20px 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.container1 .box .content p
+{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.srch{
+    padding-left: 40rem;
+    margin-top: 4rem;
+}
+
+.form-control{
+    padding: 1.8rem 1.8rem;
+    border-radius: 0.5rem;
+}
+
+.navbar-form .btnbtn{
+    padding: 1.9rem 1.9rem;
+}
+
+.navbar-form .btnbtn:hover{
+    color: var(--red);
+    background-color: #000;
+}
