@@ -1,0 +1,9 @@
+<?php
+	session_start();
+	unset($_SESSION['CustomerID']);
+	unset($_SESSION['cusloggedIn']);
+	unset($_SESSION['FirstName']);
+	unset($_SESSION['LastName']);
+	unset($_SESSION['subscription']);
+	header("Location:CustomerLogin.php");
+ ?>
